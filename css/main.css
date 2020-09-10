@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+/* primary */
+/* secondary */
+/* neutral */
+html {
+  font-size: 18px;
+}
+
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  background: #F9F7FC;
+}
+
+h1,
+h2,
+h3 {
+  color: #232127;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+
+p {
+  color: #9e9aa7;
+  padding: 0 1rem;
+}
+
+.cta {
+  background: #2acfcf;
+  height: 2.8rem;
+  border-radius: 2.8rem;
+  color: #ffffff;
+  border: none;
+  padding: 0 3rem;
+  font-weight: 700;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #F9F7FC;
+  padding: 0 1rem;
+  height: 70px;
+  margin-bottom: 2rem;
+}
+
+/* menu hamburguesa */
+nav {
+  width: calc(100vw - 2rem);
+  background-color: #3b3054;
+  position: absolute;
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: -1;
+  border-radius: .7rem;
+  opacity: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+  padding: .5rem 1.5rem;
+}
+
+nav ul hr {
+  padding: 0;
+  height: .5px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li {
+  padding: 8px 0;
+  margin: .7rem 0;
+}
+
+nav ul .nav__registrarse {
+  width: 100%;
+}
+
+.nav-active {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.menu-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  text-align: left;
+}
+
+.menu-btn .menu-btn__burger, .menu-btn .menu-btn__burger::before, .menu-btn .menu-btn__burger::after {
+  width: 27px;
+  height: 3px;
+  background: #bfbfbf;
+  border-radius: 5px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.menu-btn .menu-btn__burger::before, .menu-btn .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+}
+
+.menu-btn .menu-btn__burger::before {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.menu-btn .menu-btn__burger::after {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+/* animacion de menu hamburguesa */
+.menu-btn.open .menu-btn__burger, .menu-btn.open .menu-btn__burger::before, .menu-btn.open .menu-btn__burger::after {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  /*-15*/
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  -webkit-transform: rotate(45deg) translate(7px, -7px);
+          transform: rotate(45deg) translate(7px, -7px);
+  background: #bfbfbf;
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  -webkit-transform: rotate(-45deg) translate(7px, 7px);
+          transform: rotate(-45deg) translate(7px, 7px);
+  background: #bfbfbf;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.home {
+  margin-bottom: 6rem;
+}
+
+.home .home__img {
+  width: 120%;
+  margin: auto;
+  position: relative;
+  right: -8%;
+}
+
+.home p {
+  margin-bottom: 2rem;
+}
+
+.home > button {
+  margin-bottom: 5rem;
+}
+
+.home .link__input {
+  margin: 0 1rem;
+  padding: 1rem 1.5rem;
+  background: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: .5rem;
+  background-image: url(../images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: #3b3054;
+}
+
+.home .link__input > * {
+  height: 3rem;
+  margin: .5rem 0;
+  border-radius: .3rem;
+  border: none;
+}
+
+.home .link__input input {
+  padding: 0 1rem;
+}
+
+.estadisticas > p {
+  margin-bottom: 8rem;
+}
+
+.estadisticas .card__container .card {
+  position: relative;
+  background: #ffffff;
+  padding: 1rem;
+  padding-top: 4rem;
+  margin: 6rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.estadisticas .card__container .card img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: auto;
+  width: 2rem;
+}
+
+.estadisticas .card__container .card::before {
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #3b3054;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -2.5rem;
+  margin: auto;
+}
+
+.boost {
+  padding: 5rem 1rem;
+  background-color: #3b3054;
+  background-image: url(../images/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.boost h2 {
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+footer {
+  background: #35323e;
+  color: #ffffff;
+  padding: 3rem 1rem;
+}
+
+footer svg {
+  margin-bottom: 2rem;
+}
+
+footer .footer__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+footer .footer__block p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+footer .footer__block a {
+  color: #9e9aa7;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
+
+footer .social-media {
+  font-size: 1.3rem;
+}
+
+footer .social-media i {
+  margin: 0 .5rem;
+}
+/*# sourceMappingURL=main.css.map */
