@@ -1,0 +1,288 @@
+@media (min-width:1200px) {
+  body {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .cta {
+    background: $cyan;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    color: $white;
+    border: none;
+    padding: 0 2rem;
+    font-weight: 700;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $background;
+    padding: 0 $padDesktop;
+    height: 70px;
+    padding-bottom: 4rem;
+    padding-top: 1.5rem;
+    background: $white;
+    margin-bottom: 0;
+
+    img {
+      width: 7rem;
+      margin-right: 2rem;
+    }
+  }
+
+  /* menu hamburguesa */
+  nav {
+    width: auto;
+    background-color: inherit;
+    position: static;
+    background-image: none;
+    transition: none;
+    z-index: 2;
+    border-radius: 0;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: calc(100% - 7rem);
+
+    ul {
+      list-style: none;
+      padding: 0;
+      color: $grayishViolet;
+      text-transform: capitalize;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      hr {
+        display: none;
+      }
+
+      li {
+        padding: 0;
+        margin: 0 1rem;
+        cursor: pointer;
+        font-size: .9rem;
+      }
+
+      .nav__registrarse {
+        width: auto;
+        font-size: .9rem;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  main {
+    .home {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 0 $padDesktop;
+      background: $white;
+      padding-bottom: 10rem;
+      position: relative;
+
+
+      .home__img {
+        margin: 0;
+        position: relative;
+        right: -20%;
+        width: 60%;
+        height: 60%;
+        margin-left: -20%;
+      }
+
+      .home__content {
+        text-align: left;
+        width: 60%;
+        padding-right: .5rem;
+        background: $white;
+
+        h1 {
+          font-size: 4rem;
+          margin-bottom: .5rem;
+          padding-left: 0;
+          width: 98%;
+        }
+
+        p {
+          width: 80%;
+          margin-top: 0;
+          margin-bottom: 2rem;
+          padding-left: 0;
+        }
+
+        button {
+          height: 2.8rem;
+          border-radius: 2.8rem;
+          padding: 0 3rem;
+        }
+      }
+
+      .link__input {
+        margin: 0 $padDesktop;
+        padding: 2rem 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: .7rem;
+        background-image: url(../images/bg-shorten-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-color: $darkViolet;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto $padDesktop;
+        transform: translateY(50%);
+
+
+        &>* {
+          height: 3rem;
+          margin: .5rem 0;
+          border-radius: .5rem;
+          border: none;
+        }
+
+        input {
+          padding: 0 1rem;
+          width: 100%;
+          margin-right: 1.3rem;
+        }
+
+        button {
+          min-width: 11rem;
+        }
+      }
+
+    }
+  }
+
+  .estadisticas {
+    padding-top: 4rem;
+
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    &>p {
+      margin-bottom: 8rem;
+      width: 25rem;
+      margin: auto;
+      line-height: 200%;
+    }
+
+    .card__container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 $padDesktop;
+      text-align: left;
+
+      .card {
+        position: relative;
+        padding: 1rem;
+        padding-top: 4rem;
+        margin: 6rem 0;
+        font-size: .9rem;
+        line-height: 150%;
+
+        &:nth-child(1) {
+          transform: translateY(-12%);
+          margin-right: 2rem;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(12%);
+          margin-left: 2rem;
+        }
+
+        img {
+          position: absolute;
+          left: -10rem;
+        }
+
+        &::before {
+          content: "";
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          background: $darkViolet;
+          position: absolute;
+          left: -10rem;
+          right: 0;
+          top: -2.5rem;
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .boost {
+    padding: 3rem $padDesktop;
+    background-image: url(../images/bg-boost-desktop.svg);
+
+
+    h2 {
+      color: $white;
+      font-size: 2rem;
+    }
+  }
+
+  footer {
+    padding: 4rem $padDesktop;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+
+    svg {
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+
+    .footer__block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+
+      p {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: $white;
+        margin: 0;
+        margin-bottom: 2rem;
+        padding: 0;
+      }
+
+      a {
+        color: $grayishViolet;
+        text-decoration: none;
+        margin-bottom: 1rem;
+        font-size: .9rem;
+      }
+    }
+
+    .social-media {
+      font-size: 1.3rem;
+
+      i {
+        margin: 0 .5rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

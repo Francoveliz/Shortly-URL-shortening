@@ -36,7 +36,12 @@ p {
   border: none;
   padding: 0 3rem;
   font-weight: 700;
+  cursor: pointer;
 
+  &:hover {
+    filter: brightness(1.7);
+
+  }
 }
 
 header {
@@ -115,7 +120,7 @@ nav {
     height: 3px;
     background: $gray;
     border-radius: 5px;
-    transition: .5s ease;
+    transition: .3s ease;
 
     &::before,
     &::after {
@@ -279,6 +284,10 @@ footer {
       text-decoration: none;
       margin-bottom: 1rem;
       font-size: .9rem;
+
+      &:hover {
+        color: $cyan;
+      }
     }
   }
 
@@ -287,6 +296,12 @@ footer {
 
     i {
       margin: 0 .5rem;
+
+      &:hover {
+        color: $cyan;
+      }
     }
   }
 }
+
+@import "desktop-view";
