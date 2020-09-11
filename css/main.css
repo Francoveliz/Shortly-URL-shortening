@@ -53,10 +53,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #F9F7FC;
+  background: #ffffff;
   padding: 0 1rem;
   height: 70px;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* menu hamburguesa */
@@ -78,21 +78,22 @@ nav {
   opacity: 0;
 }
 
+nav hr {
+  height: .5px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 1rem;
+}
+
 nav ul {
   list-style: none;
+  margin: 0;
   padding: 0;
   color: #ffffff;
   text-transform: capitalize;
   text-align: center;
   font-weight: bold;
   padding: .5rem 1.5rem;
-}
-
-nav ul hr {
-  padding: 0;
-  height: .5px;
-  border: 0;
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 nav ul li {
@@ -179,7 +180,9 @@ main {
 }
 
 .home {
-  margin-bottom: 6rem;
+  background: #ffffff;
+  position: relative;
+  padding-bottom: 12rem;
 }
 
 .home .home__img {
@@ -195,10 +198,10 @@ main {
 
 .home > button {
   margin-bottom: 5rem;
+  border: 3px solid red;
 }
 
 .home .link__input {
-  margin: 0 1rem;
   padding: 1rem 1.5rem;
   background: grey;
   display: -webkit-box;
@@ -212,7 +215,15 @@ main {
   background-image: url(../images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-position: right top;
+  background-size: cover;
   background-color: #3b3054;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto 1rem;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .home .link__input > * {
@@ -224,6 +235,10 @@ main {
 
 .home .link__input input {
   padding: 0 1rem;
+}
+
+.estadisticas {
+  padding-top: 9rem;
 }
 
 .estadisticas > p {

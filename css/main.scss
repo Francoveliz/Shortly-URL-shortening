@@ -48,10 +48,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $background;
+  background: $white;
   padding: 0 $padMobile;
   height: 70px;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* menu hamburguesa */
@@ -71,9 +71,18 @@ nav {
   border-radius: .7rem;
   opacity: 0;
 
+  hr {
+
+    height: .5px;
+    border: 0;
+    background-color: rgba(255, 255, 255, .2);
+    margin: 0 $padMobile;
+  }
 
   ul {
+
     list-style: none;
+    margin: 0;
     padding: 0;
     color: $white;
     text-transform: capitalize;
@@ -81,12 +90,8 @@ nav {
     font-weight: bold;
     padding: .5rem 1.5rem;
 
-    hr {
-      padding: 0;
-      height: .5px;
-      border: 0;
-      background-color: rgba(255, 255, 255, .2);
-    }
+
+
 
     li {
       padding: 8px 0;
@@ -162,7 +167,10 @@ main {
 }
 
 .home {
-  margin-bottom: 6rem;
+
+  background: $white;
+  position: relative;
+  padding-bottom: 12rem;
 
   .home__img {
     width: 120%;
@@ -177,10 +185,10 @@ main {
 
   &>button {
     margin-bottom: 5rem;
+    border: 3px solid red;
   }
 
   .link__input {
-    margin: 0 $padMobile;
     padding: 1rem 1.5rem;
     background: grey;
     display: flex;
@@ -189,7 +197,15 @@ main {
     background-image: url(../images/bg-shorten-mobile.svg);
     background-repeat: no-repeat;
     background-position: right top;
+    background-size: cover;
     background-color: $darkViolet;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto $padMobile;
+    transform: translateY(50%);
+
 
     &>* {
       height: 3rem;
@@ -205,6 +221,8 @@ main {
 }
 
 .estadisticas {
+  padding-top: 9rem;
+
   &>p {
     margin-bottom: 8rem;
   }
