@@ -412,6 +412,9 @@ footer .social-media i:hover {
     cursor: pointer;
     font-size: .9rem;
   }
+  nav ul li:hover {
+    color: #2acfcf;
+  }
   nav ul .nav__registrarse {
     width: auto;
     font-size: .9rem;

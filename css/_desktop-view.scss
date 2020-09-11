@@ -67,6 +67,10 @@
         margin: 0 1rem;
         cursor: pointer;
         font-size: .9rem;
+
+        &:hover {
+          color: $cyan;
+        }
       }
 
       .nav__registrarse {
