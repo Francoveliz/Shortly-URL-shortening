@@ -18,14 +18,15 @@ menuBtn.addEventListener("click", () => {
   }
 });
 
-let google = encodeURIComponent("https://google.com/");
-console.log(google);
-
 fetch("https://cleanuri.com/api/v1/shorten", {
     method: "POST",
+    'mode': 'no-cors',
+    'headers': {
+      'Access-Control-Allow-Origin': '*',
+    },
     body: JSON.stringify({
-      url: google
+      url: "https%3A%2F%2Fgoogle.com%2F"
     })
   })
   .then(response => response.json)
-  .then(data => console.log(data));
+  .then(data => console.log(data.result_url));
