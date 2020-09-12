@@ -188,40 +188,90 @@ main {
     border: 3px solid red;
   }
 
-  .link__input {
-    padding: 1rem 1.5rem;
-    background: grey;
+
+}
+
+.link__input {
+  padding: 1rem 1.5rem;
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  border-radius: .5rem;
+  background-image: url(../images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  background-color: $darkViolet;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto $padMobile;
+  transform: translateY(-50%);
+
+  &>* {
+    height: 3rem;
+    margin: .5rem 0;
+    border-radius: .3rem;
+    border: none;
+  }
+
+  input {
+    padding: 0 1rem;
+  }
+}
+
+#link-container {
+  position: relative;
+  top: -4rem;
+
+
+  * {
+    padding: .7rem 0;
+  }
+
+  .link-acortado {
+    background: $white;
+    border-radius: 5px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
-    border-radius: .5rem;
-    background-image: url(../images/bg-shorten-mobile.svg);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: cover;
-    background-color: $darkViolet;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto $padMobile;
-    transform: translateY(50%);
+    padding: 1rem;
+    margin: 1rem $padMobile;
 
+    .link__long {
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
 
-    &>* {
-      height: 3rem;
-      margin: .5rem 0;
-      border-radius: .3rem;
-      border: none;
     }
 
-    input {
-      padding: 0 1rem;
+    .link__right-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      a {
+        padding: 1rem 0;
+      }
+
+      button {
+        background: $cyan;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        color: $white;
+      }
     }
+
+
   }
 }
 
 .estadisticas {
-  padding-top: 9rem;
+  position: relative;
 
   &>p {
     margin-bottom: 8rem;
