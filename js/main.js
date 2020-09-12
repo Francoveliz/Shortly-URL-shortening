@@ -17,3 +17,15 @@ menuBtn.addEventListener("click", () => {
     body.style.overflow = "visible";
   }
 });
+
+let google = encodeURIComponent("https://google.com/");
+console.log(google);
+
+fetch("https://cleanuri.com/api/v1/shorten", {
+    method: "POST",
+    body: JSON.stringify({
+      url: google
+    })
+  })
+  .then(response => response.json)
+  .then(data => console.log(data));
