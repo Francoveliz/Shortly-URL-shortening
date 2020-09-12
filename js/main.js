@@ -111,6 +111,7 @@ let main = (function () {
       copyText.select();
       copyText.setSelectionRange(0, 99999);
       document.execCommand("copy");
+      copyText.style.display = "none";
       this.btnCopy.innerHTML = "Copiado!";
       this.btnCopy.classList.add("btn-copiado");
     }
