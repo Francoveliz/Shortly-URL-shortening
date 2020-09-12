@@ -166,6 +166,75 @@
     }
   }
 
+
+  #link-container {
+    position: relative;
+    top: -4rem;
+
+
+
+    * {
+      padding: .7rem 0;
+    }
+
+    .link-acortado {
+      background: $white;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 0.5rem 3rem;
+      margin: 1rem $padDesktop;
+      word-wrap: break-word;
+
+      .link__long {
+        border-bottom: none;
+        text-decoration: none;
+        color: inherit;
+        text-align: left;
+
+      }
+
+      .link__right-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 50%;
+
+        a {
+          padding: 1rem 0;
+          color: $cyan;
+          text-decoration: none;
+        }
+
+        button {
+          background: $cyan;
+          border: none;
+          border-radius: 5px;
+          width: auto;
+          color: $white;
+          padding: 1rem 2rem;
+          margin-left: 2rem;
+          cursor: pointer;
+          transition: .5s ease;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.23);
+          }
+
+        }
+
+        .btn-copiado {
+
+          background: $darkViolet;
+        }
+      }
+    }
+
+  }
+
   .estadisticas {
 
     h2 {

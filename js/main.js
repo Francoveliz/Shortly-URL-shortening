@@ -12,7 +12,6 @@ let main = (function () {
       this.linkContainer = document.getElementById("link-container");
       this.linkToShorten = document.getElementById("link-to-shorten");
       this.btnShorten = document.getElementById("btn-shorten");
-      this.testArea = document.getElementById("test");
     },
     setVariables: function () {
       this.menuOpen = false;
@@ -39,6 +38,9 @@ let main = (function () {
       }
     },
     setShortLinkDiv: function () {
+      if (this.linkContainer.firstChild) {
+        this.linkContainer.removeChild(this.linkContainer.firstChild);
+      }
       // crear elementos
       let contenedor = document.createElement("div"),
         longLink = document.createElement("a"),
@@ -49,23 +51,32 @@ let main = (function () {
       contenedor.classList.add("link-acortado");
       longLink.classList.add("link__long");
       righSection.classList.add("link__right-section");
+      button.classList.add("btn-copy");
       // agregar elementos al DOM
       this.linkContainer.appendChild(contenedor);
       contenedor.appendChild(longLink);
       contenedor.appendChild(righSection);
       righSection.appendChild(shortLink);
       righSection.appendChild(button);
+      // atributos
+      longLink.href = this.linkToShorten.value;
+      longLink.target = "_blank";
+      shortLink.href = "https://" + this.shortUrl;
+      shortLink.target = "_blank";
       // contenido
       longLink.innerHTML = this.linkToShorten.value;
-      shortLink.innerHTML = "shorturl.at/aftxI";
+      shortLink.innerHTML = this.shortUrl;
       button.innerHTML = "Copiar";
+      //set btn copy
+      this.setBtnCopyAttributes();
     },
-    renderResponse: function (res) {
-      if (res.errors) {
-        this.testArea.innerHTML = "<p>Sorry, couldn't format your URL.</p><p>Try again.</p>";
-      } else {
-        this.testArea.innerHTML = `<p>Your shortened url is: </p><p> ${res.shortUrl} </p>`;
-      }
+    setBtnCopyAttributes: function () {
+      this.btnCopy = document.querySelector(".btn-copy");
+      this.btnCopy.addEventListener("click", this.setBtnCopy.bind(this));
+    },
+    displayShortUrl: function (event) {
+      event.preventDefault();
+      this.shortenUrl();
     },
     shortenUrl: function () {
       const data = JSON.stringify({
@@ -83,9 +94,25 @@ let main = (function () {
       xhr.setRequestHeader('apikey', this.apiKey);
       xhr.send(data);
     },
-    displayShortUrl: function (event) {
-      event.preventDefault();
-      this.shortenUrl();
+    renderResponse: function (res) {
+      if (res.errors) {
+        this.testArea.innerHTML = "<p>Sorry, couldn't format your URL.</p><p>Try again.</p>";
+      } else {
+        this.shortUrl = res.shortUrl;
+        this.setShortLinkDiv();
+        //this.testArea.innerHTML = `<p>Your shortened url is: </p><p> ${res.shortUrl} </p>`;
+      }
+    },
+    setBtnCopy: function () {
+      let copyText = document.createElement("input");
+      copyText.type = "text";
+      document.body.appendChild(copyText);
+      copyText.value = "https://" + this.shortUrl;
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      this.btnCopy.innerHTML = "Copiado!";
+      this.btnCopy.classList.add("btn-copiado");
     }
   };
 })();

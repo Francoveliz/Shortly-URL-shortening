@@ -239,6 +239,7 @@ main {
     flex-direction: column;
     padding: 1rem;
     margin: 1rem $padMobile;
+    word-wrap: break-word;
 
     .link__long {
       border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -255,6 +256,8 @@ main {
 
       a {
         padding: 1rem 0;
+        color: $cyan;
+        text-decoration: none;
       }
 
       button {
@@ -263,6 +266,12 @@ main {
         border-radius: 5px;
         width: 100%;
         color: $white;
+
+      }
+
+      .btn-copiado {
+
+        background: $darkViolet;
       }
     }
 

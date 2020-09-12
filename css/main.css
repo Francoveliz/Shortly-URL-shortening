@@ -264,6 +264,7 @@ main {
           flex-direction: column;
   padding: 1rem;
   margin: 1rem 1rem;
+  word-wrap: break-word;
 }
 
 #link-container .link-acortado .link__long {
@@ -286,6 +287,8 @@ main {
 
 #link-container .link-acortado .link__right-section a {
   padding: 1rem 0;
+  color: #2acfcf;
+  text-decoration: none;
 }
 
 #link-container .link-acortado .link__right-section button {
@@ -294,6 +297,10 @@ main {
   border-radius: 5px;
   width: 100%;
   color: #ffffff;
+}
+
+#link-container .link-acortado .link__right-section .btn-copiado {
+  background: #3b3054;
 }
 
 .estadisticas {
@@ -576,6 +583,78 @@ footer .social-media i:hover {
   }
   .link__input button {
     min-width: 11rem;
+  }
+  #link-container {
+    position: relative;
+    top: -4rem;
+  }
+  #link-container * {
+    padding: .7rem 0;
+  }
+  #link-container .link-acortado {
+    background: #ffffff;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0.5rem 3rem;
+    margin: 1rem 10rem;
+    word-wrap: break-word;
+  }
+  #link-container .link-acortado .link__long {
+    border-bottom: none;
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+  }
+  #link-container .link-acortado .link__right-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 50%;
+  }
+  #link-container .link-acortado .link__right-section a {
+    padding: 1rem 0;
+    color: #2acfcf;
+    text-decoration: none;
+  }
+  #link-container .link-acortado .link__right-section button {
+    background: #2acfcf;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+  #link-container .link-acortado .link__right-section button:hover {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.23);
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.23);
+  }
+  #link-container .link-acortado .link__right-section .btn-copiado {
+    background: #3b3054;
   }
   .estadisticas h2 {
     font-size: 2rem;
