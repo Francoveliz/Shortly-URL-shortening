@@ -12,6 +12,8 @@ let main = (function () {
       this.linkContainer = document.getElementById("link-container");
       this.linkToShorten = document.getElementById("link-to-shorten");
       this.btnShorten = document.getElementById("btn-shorten");
+      this.linkDiv = document.querySelector(".link__input");
+      this.errorMessage = document.querySelector(".error-message");
     },
     setVariables: function () {
       this.menuOpen = false;
@@ -94,10 +96,19 @@ let main = (function () {
       xhr.setRequestHeader('apikey', this.apiKey);
       xhr.send(data);
     },
+    setErrorMessage: function () {
+      this.linkToShorten.classList.add("error");
+      this.errorMessage.style.display = "block";
+    },
+    removeErrorMessage: function () {
+      this.linkToShorten.classList.remove("error");
+      this.errorMessage.style.display = "none";
+    },
     renderResponse: function (res) {
       if (res.errors) {
-        this.testArea.innerHTML = "<p>Sorry, couldn't format your URL.</p><p>Try again.</p>";
+        this.setErrorMessage();
       } else {
+        this.removeErrorMessage();
         this.shortUrl = res.shortUrl;
         this.setShortLinkDiv();
         //this.testArea.innerHTML = `<p>Your shortened url is: </p><p> ${res.shortUrl} </p>`;

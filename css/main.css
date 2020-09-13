@@ -224,6 +224,7 @@ main {
   margin: auto 1rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  position: relative;
 }
 
 .link__input > * {
@@ -235,6 +236,43 @@ main {
 
 .link__input input {
   padding: 0 1rem;
+}
+
+.error-message {
+  color: #f46262;
+  font-style: italic;
+  position: relative;
+  top: 0;
+  right: 0;
+  text-align: left;
+  margin: 0;
+  margin-bottom: .5rem;
+  padding: 0;
+  margin-top: .2rem;
+  height: auto;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.error {
+  -webkit-box-shadow: 0px 0px 0px 3px #f46262;
+          box-shadow: 0px 0px 0px 3px #f46262;
+}
+
+.error::-webkit-input-placeholder {
+  color: #f46262;
+}
+
+.error:-ms-input-placeholder {
+  color: #f46262;
+}
+
+.error::-ms-input-placeholder {
+  color: #f46262;
+}
+
+.error::placeholder {
+  color: #f46262;
 }
 
 #link-container {
@@ -569,6 +607,7 @@ footer .social-media i:hover {
     border-radius: .7rem;
     background-image: url(../images/bg-shorten-desktop.svg);
     margin: auto 10rem;
+    position: relative;
   }
   .link__input > * {
     height: 3rem;
@@ -583,6 +622,21 @@ footer .social-media i:hover {
   }
   .link__input button {
     min-width: 11rem;
+  }
+  .link__input .error-message {
+    color: #f46262;
+    font-style: italic;
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+    text-align: left;
+    margin: 0;
+    margin-bottom: .5rem;
+    padding: 0;
+    margin-top: .2rem;
+    height: auto;
+    font-size: 0.9rem;
+    display: none;
   }
   #link-container {
     position: relative;
