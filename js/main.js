@@ -111,7 +111,6 @@ let main = (function () {
         this.removeErrorMessage();
         this.shortUrl = res.shortUrl;
         this.setShortLinkDiv();
-        //this.testArea.innerHTML = `<p>Your shortened url is: </p><p> ${res.shortUrl} </p>`;
       }
     },
     setBtnCopy: function () {
