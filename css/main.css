@@ -454,6 +454,15 @@ footer .social-media i:hover {
   color: #2acfcf;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
 @media (min-width: 1200px) {
   body {
     max-width: 1440px;
